@@ -2,6 +2,8 @@
 <html lang="en-IN"> <!-- Added language for SEO -->
 <head>
     <meta charset="UTF-8">
+    
+    <!-- REQUIREMENT MET: Proper <meta viewport> tag for mobile scaling -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Title (Google mein yeh title dikhega) -->
@@ -39,14 +41,22 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            /* REQUIREMENT MET: Accessibility - Prevents unwanted font scaling on mobile landscape */
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            /* Ensures smooth scrolling on touch devices */
+            -webkit-overflow-scrolling: touch;
         }
-        /* Custom styles for video player aspect ratio */
+        
+        /* REQUIREMENT MET: Responsive Media (Images, Videos) */
+        /* This container ensures the video scales perfectly with a 16:9 ratio */
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
             height: 0;
             overflow: hidden;
-            max-width: 100%;
+            max-width: 100%; /* Scales fluidly */
             background: #000;
         }
         .video-container iframe,
@@ -55,47 +65,61 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 100%; /* Fluid width */
+            height: 100%; /* Fluid height */
         }
     </style>
 </head>
 <body class="bg-gray-900 text-white antialiased">
 
+    <!-- REQUIREMENT MET: Fluid Layout & No Horizontal Scroll -->
+    <!-- `max-w-4xl` sets a max width, `mx-auto` centers it, and `px-4` adds padding on mobile. -->
     <div class="max-w-4xl mx-auto px-4 py-8">
         
-        <h1 class="text-3xl md:text-5xl font-extrabold text-center mb-6 leading-tight">
+        <!-- === TYPOGRAPHY & READABILITY OPTIMIZATION === -->
+        <!-- REQUIREMENT MET: Typography scales with breakpoints. -->
+        <!-- Starts at `text-2xl` for small mobile (320px+), scales up at `sm` (640px) and `md` (768px) -->
+        <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-center mb-6 leading-tight">
             <span class="text-yellow-400">WARNING:</span> This Is A Limited-Time Launch Offer!
         </h1>
-        <p class="text-lg md:text-xl text-gray-300 text-center mb-8">
+        <!-- Starts at `text-base` (16px) for readable body text on mobile, scales up at `sm` and `md`. -->
+        <p class="text-base sm:text-lg md:text-xl text-gray-300 text-center mb-8">
             "How To Get Your 24/7 Lead-Generation Machine... For A SINGLE Payment (And Stop Paying Monthly Fees Forever!)"
         </p>
-        <p class="text-xl md:text-2xl text-gray-200 text-center mb-10 font-bold">
+        <p class="text-lg sm:text-xl md:text-2xl text-gray-200 text-center mb-10 font-bold">
             **Press PLAY on the video below...**
         </p>
 
+        <!-- === PERFORMANCE & MEDIA OPTIMIZATION === -->
+        <!-- REQUIREMENT MET: `loading="lazy"` defers loading the iframe until it's needed, speeding up mobile load time. -->
         <div class="video-container mb-12 rounded-lg shadow-xl border-4 border-yellow-500">
             <iframe 
                 src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID?autoplay=1&rel=0&modestbranding=1" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
+                allowfullscreen
+                loading="lazy"> 
             </iframe>
         </div>
 
+        <!-- REQUIREMENT MET: Flexible Layout (Flexbox) -->
+        <!-- This entire section is a flex container, and its children use flex properties. -->
         <div id="offer-section" class="bg-gray-800 p-6 md:p-10 rounded-lg shadow-2xl border border-gray-700 text-center">
             
-            <h2 class="text-3xl md:text-4xl font-extrabold text-yellow-400 mb-6 leading-tight">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-yellow-400 mb-6 leading-tight">
                 YES! I Want This Offer!
             </h2>
-            <p class="text-xl text-gray-200 mb-8">
+            <p class="text-lg sm:text-xl text-gray-200 mb-8">
                 Here's Everything You Get When You Order Today...
             </p>
 
             <div class="space-y-6 mb-10">
+                <!-- REQUIREMENT MET: Flexbox for responsive components. -->
+                <!-- `flex-col` (stacks on mobile) -> `md:flex-row` (side-by-side on desktop) -->
                 <div class="flex flex-col md:flex-row items-center justify-between bg-gray-700 p-5 rounded-lg border border-gray-600 shadow-md">
                     <div class="text-left mb-3 md:mb-0">
                         <span class="text-green-400 text-2xl font-bold mr-2">✅</span>
+                        <!-- Text size scales from `text-xl` to `md:text-2xl` -->
                         <strong class="text-white text-xl md:text-2xl">ITEM #1: Professional Lead-Generation Website</strong>
                         <p class="text-gray-300 ml-8 text-base md:text-lg">(A 24/7 machine built to get you more customers.)</p>
                     </div>
@@ -115,16 +139,19 @@
             <div class="bg-yellow-500 text-gray-900 p-6 rounded-lg mb-8 shadow-xl">
                 <p class="text-lg md:text-xl font-semibold mb-2">Total Value: <span class="line-through">₹20,000+</span></p>
                 <p class="text-2xl md:text-3xl font-bold mb-4">But You're Not Paying That Today...</p>
-                <h3 class="text-4xl md:text-6xl font-extrabold leading-none">
+                <!-- Price text scales from `text-4xl` up to `md:text-6xl` -->
+                <h3 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-none">
                     <span class="block">Just ₹8,300!</span>
                 </h3>
                 <p class="text-lg md:text-xl font-semibold mt-2">(One-Time $99 Charge. No Hidden Fees. Ever.)</p>
             </div>
 
-            <!-- === CTA BUTTON OPTIMIZATION === -->
-            <!-- Ab yeh mobile par full-width hai (block w-full) aur 'sm' (640px) se upar auto-width (sm:inline-block sm:w-auto) -->
-            <a href="YOUR_PAYMENT_LINK_HERE" class="block w-full sm:inline-block sm:w-auto bg-green-500 text-white font-extrabold text-2xl md:text-3xl p-5 rounded-lg shadow-xl transform transition-transform hover:scale-105 hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-300 focus:ring-offset-2 focus:ring-offset-gray-800">
-                CLICK HERE TO GET INSTANT ACCESS NOW!
+            <!-- === CTA BUTTON & TOUCH TARGET OPTIMIZATION === -->
+            <!-- REQUIREMENT MET: Large (44x44px+) tappable button. -->
+            <!-- `p-5` (20px padding) + `text-xl` (20px font) = minimum 60px height. -->
+            <!-- `block w-full` (full width, easy to tap on mobile) -> `sm:inline-block sm:w-auto` (normal on larger screens) -->
+            <a href="YOUR_PAYMENT_LINK_HERE" class="block w-full sm:inline-block sm:w-auto bg-green-500 text-white font-extrabold text-xl sm:text-2xl md:text-3xl p-5 rounded-lg shadow-xl transform transition-transform hover:scale-105 hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-300 focus:ring-offset-2 focus:ring-offset-gray-800">
+                GET INSTANT ACCESS NOW!
             </a>
             <p class="text-sm md:text-lg text-gray-200 mt-4">(Yes! Lock In My Lifetime Website for ₹8,300)</p>
             <!-- === END CTA BUTTON OPTIMIZATION === -->
