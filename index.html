@@ -1,420 +1,160 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en-IN"> <!-- Added language for SEO -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta Tags -->
-    <title>Get Your Professional Website at a One-Time Cost — with Lifetime Hosting FREE!</title>
-    <meta name="description" content="Build your online presence once and for all with a stunning, professional website for a single, one-time payment. Includes FREE lifetime hosting. No maintenance, no developers, no extra charges.">
-    <meta name="keywords" content="Lifetime Website, One-Time Website Cost, Free Hosting Website Deal, professional website, small business website">
+
+    <!-- SEO Title (Google mein yeh title dikhega) -->
+    <title>Lifetime Website Offer (₹8,300) | Stop Paying Monthly Fees!</title>
+
+    <!-- SEO Meta Description (Google mein title ke neeche yeh description dikhega) -->
+    <meta name="description" content="Stop paying monthly fees! Get a professional lead-gen website + FREE lifetime hosting for a single one-time payment of ₹8,300. Pay once, own forever.">
     
-    <!-- Open Graph / Facebook -->
+    <!-- SEO Meta Keywords -->
+    <meta name="keywords" content="one time cost website, free lifetime hosting, lifetime website deal India, no monthly fee website, pay once website, lead generation website India, ₹8300 website, 99foreversite">
+
+    <!-- Canonical URL (SEO ke liye important) -->
+    <link rel="canonical" href="https://99foreversite.shop" />
+
+    <!-- Open Graph / Facebook / WhatsApp (Social Sharing ke liye) -->
+    <meta property="og:title" content="Lifetime Website Offer (₹8,300) | Stop Paying Monthly Fees!">
+    <meta property="og:description" content="Get a professional lead-gen website + FREE lifetime hosting for a single payment. Pay once, own forever.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://99foreversite.shop/">
-    <meta property="og:title" content="Get Your Professional Website at a One-Time Cost — with Lifetime Hosting FREE!">
-    <meta property="og:description" content="Build your online presence once and for all with a stunning, professional website for a single, one-time payment. Includes FREE lifetime hosting.">
-    <meta property="og:image" content="https://placehold.co/1200x630/14213d/ffffff?text=Lifetime+Website+Offer">
+    <meta property="og:url" content="https://99foreversite.shop">
+    <!-- IMPORTANT: Neeche diye gaye image URL ko apni brand image se badlein (e.g., 1200x630px) -->
+    <meta property="og:image" content="https://placehold.co/1200x630/0A0A0A/FFFF00?text=Your+Lifetime+Website+Offer">
+    <meta property="og:site_name" content="99ForEverSite">
 
-    <!-- Twitter Card -->
+    <!-- Twitter Card (Twitter par share karne ke liye) -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://99foreversite.shop/">
-    <meta name="twitter:title" content="Get Your Professional Website at a One-Time Cost — with Lifetime Hosting FREE!">
-    <meta name="twitter:description" content="Build your online presence once and for all with a stunning, professional website for a single, one-time payment. Includes FREE lifetime hosting.">
-    <meta name="twitter:image" content="https://placehold.co/1200x630/14213d/ffffff?text=Lifetime+Website+Offer">
+    <meta name="twitter:title" content="Lifetime Website Offer (₹8,300) | Stop Paying Monthly Fees!">
+    <meta name="twitter:description" content="Get a professional lead-gen website + FREE lifetime hosting for a single payment. Pay once, own forever.">
+    <!-- IMPORTANT: Isse bhi apni brand image se badlein (same as og:image) -->
+    <meta name="twitter:image" content="https://placehold.co/1200x630/0A0A0A/FFFF00?text=Your+Lifetime+Website+Offer">
+    <meta name="twitter:domain" content="99foreversite.shop">
+    <meta name="twitter:url" content="https://99foreversite.shop">
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #ffffff;
-            color: #14213d; /* Deep Navy */
         }
-        .bg-navy { background-color: #14213d; }
-        .bg-gold { background-color: #fca311; }
-        .text-navy { color: #14213d; }
-        .text-gold { color: #fca311; }
-        .border-gold { border-color: #fca311; }
-        .cta-button {
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px 0 rgba(252, 163, 17, 0.4);
+        /* Custom styles for video player aspect ratio */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
         }
-        .cta-button:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 8px 25px 0 rgba(252, 163, 17, 0.5);
-        }
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .social-button {
-            transition: all 0.3s ease;
-        }
-        .social-button:hover {
-            transform: scale(1.1) translateY(-2px);
+        .video-container iframe,
+        .video-container object,
+        .video-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="bg-gray-900 text-white antialiased">
 
-    <!-- Header / Hero Section -->
-    <header class="bg-navy text-white">
-        <div class="container mx-auto px-6 py-16 md:py-20 text-center">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
-                Get a Stunning Website at a <span class="text-gold">One-Time Cost</span> — with Lifetime Hosting <span class="text-gold">FREE!</span>
-            </h1>
-            <p class="text-base md:text-lg lg:text-xl font-light mb-8 max-w-3xl mx-auto text-gray-300">
-                No maintenance. No monthly fees. No developer required. Just results.
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        
+        <h1 class="text-3xl md:text-5xl font-extrabold text-center mb-6 leading-tight">
+            <span class="text-yellow-400">WARNING:</span> This Is A Limited-Time Launch Offer!
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 text-center mb-8">
+            "How To Get Your 24/7 Lead-Generation Machine... For A SINGLE Payment (And Stop Paying Monthly Fees Forever!)"
+        </p>
+        <p class="text-xl md:text-2xl text-gray-200 text-center mb-10 font-bold">
+            **Press PLAY on the video below...**
+        </p>
+
+        <div class="video-container mb-12 rounded-lg shadow-xl border-4 border-yellow-500">
+            <iframe 
+                src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID?autoplay=1&rel=0&modestbranding=1" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div id="offer-section" class="bg-gray-800 p-8 md:p-10 rounded-lg shadow-2xl border border-gray-700 text-center">
+            
+            <h2 class="text-3xl md:text-4xl font-extrabold text-yellow-400 mb-6 leading-tight">
+                YES! I Want This Offer!
+            </h2>
+            <p class="text-xl text-gray-200 mb-8">
+                Here's Everything You Get When You Order Today...
             </p>
-            <a href="https://wa.me/918851481785?text=I%20am%20interested%20for%20the%20forever%20site%20offer!" target="_blank" rel="noopener noreferrer" class="cta-button w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gold text-navy font-bold text-base sm:text-lg px-6 py-3 md:px-8 md:py-4 lg:px-10 lg:py-5 rounded-xl shadow-lg">
-                <span>Claim My Lifetime Website Now</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-            </a>
-            <!-- Trust Bar Section -->
-            <div class="mt-12 max-w-4xl mx-auto">
-                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6">
-                    <div class="flex flex-col sm:flex-row flex-wrap justify-around items-center gap-4 sm:gap-6">
-                        <!-- Item 1: Lifetime Hosting -->
-                        <div class="flex items-center gap-3 text-gray-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                            </svg>
-                            <span class="font-medium text-sm sm:text-base">Lifetime Hosting</span>
-                        </div>
-                        <!-- Item 2: No Monthly Fees -->
-                        <div class="flex items-center gap-3 text-gray-200">
-                             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                               <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                               <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l1.5-1.5" />
-                            </svg>
-                            <span class="font-medium text-sm sm:text-base">No Monthly Fees</span>
-                        </div>
-                        <!-- Item 3: 100% Ownership -->
-                        <div class="flex items-center gap-3 text-gray-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H5v-2H3v-2H1v-4a6 6 0 017.743-5.743z" />
-                            </svg>
-                            <span class="font-medium text-sm sm:text-base">100% Ownership</span>
-                        </div>
+
+            <div class="space-y-6 mb-10">
+                <div class="flex flex-col md:flex-row items-center justify-between bg-gray-700 p-5 rounded-lg border border-gray-600 shadow-md">
+                    <div class="text-left mb-3 md:mb-0 md:text-xl">
+                        <span class="text-green-400 text-2xl font-bold mr-2">✅</span>
+                        <strong class="text-white text-xl md:text-2xl">ITEM #1: Professional Lead-Generation Website</strong>
+                        <p class="text-gray-300 ml-8">(A 24/7 machine built to get you more customers.)</p>
                     </div>
+                    <span class="text-yellow-400 text-lg md:text-xl font-bold flex-shrink-0">Value: ₹15,000</span>
                 </div>
+
+                <div class="flex flex-col md:flex-row items-center justify-between bg-gray-700 p-5 rounded-lg border border-gray-600 shadow-md">
+                    <div class="text-left mb-3 md:mb-0 md:text-xl">
+                        <span class="text-green-400 text-2xl font-bold mr-2">✅</span>
+                        <strong class="text-white text-xl md:text-2xl">ITEM #2: FREE Lifetime "Business-Class" Hosting</strong>
+                        <p class="text-gray-300 ml-8">(Stop paying yearly fees. Forever.)</p>
+                    </div>
+                    <span class="text-yellow-400 text-lg md:text-xl font-bold flex-shrink-0">Value: ₹5,000 Every Single Year!</span>
+                </div>
+            </div>
+
+            <div class="bg-yellow-500 text-gray-900 p-6 rounded-lg mb-8 shadow-xl">
+                <p class="text-lg md:text-xl font-semibold mb-2">Total Value: <span class="line-through">₹20,000+</span></p>
+                <p class="text-2xl md:text-3xl font-bold mb-4">But You're Not Paying That Today...</p>
+                <h3 class="text-4xl md:text-6xl font-extrabold leading-none">
+                    <span class="block">Just ₹8,300!</span>
+                </h3>
+                <p class="text-lg md:text-xl font-semibold mt-2">(One-Time $99 Charge. No Hidden Fees. Ever.)</p>
+            </div>
+
+            <a href="YOUR_PAYMENT_LINK_HERE" class="inline-block bg-green-500 text-white font-extrabold text-2xl md:text-3xl p-5 rounded-lg shadow-xl transform transition-transform hover:scale-105 hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-300 focus:ring-offset-2 focus:ring-offset-gray-800">
+                CLICK HERE TO GET INSTANT ACCESS NOW!
+            </a>
+            <p class="text-sm md:text-lg text-gray-200 mt-4">(Yes! Lock In My Lifetime Website for ₹8,300)</p>
+
+            <div class="mt-10 pt-6 border-t border-gray-700">
+                <p class="text-md md:text-lg font-semibold text-gray-300 mb-2">
+                    Your 100% "You'll Love It" Satisfaction Guarantee
+                </p>
+                <p class="text-sm text-gray-400 max-w-2xl mx-auto">
+                    If you are not 100% satisfied with your new website, we will work with you until you are. You have zero risk.
+                </p>
             </div>
         </div>
-    </header>
 
-    <main>
-        <!-- Pain Story Section -->
-        <section class="py-16 md:py-20 bg-gray-50 fade-in-section">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Stop. Does This Sound Familiar?</h2>
-                <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto mb-10">You're stuck in a cycle of endless web development costs. It's frustrating, right?</p>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Pain Point 1 -->
-                    <div class="bg-white p-6 md:p-8 rounded-lg shadow-md border border-gray-200">
-                        <h3 class="text-lg md:text-xl font-bold mb-3">Tired of Paying Developers For Every Small Change?</h3>
-                        <p class="text-sm md:text-base text-gray-700">That tiny text edit or image swap just cost you another $150. You feel held hostage by your developer's schedule and invoices.</p>
-                    </div>
-                    <!-- Pain Point 2 -->
-                    <div class="bg-white p-6 md:p-8 rounded-lg shadow-md border border-gray-200">
-                        <h3 class="text-lg md:text-xl font-bold mb-3">Dread Those "Subscription Renewal" Emails?</h3>
-                        <p class="text-sm md:text-base text-gray-700">The hosting bill. The theme subscription. The plugin fees. They add up, month after month, slowly draining your profits.</p>
-                    </div>
-                    <!-- Pain Point 3 -->
-                    <div class="bg-white p-6 md:p-8 rounded-lg shadow-md border border-gray-200 md:col-span-2 lg:col-span-1">
-                        <h3 class="text-lg md:text-xl font-bold mb-3">Worried Your Site Will Break or Get Hacked?</h3>
-                        <p class="text-sm md:text-base text-gray-700">"Update required." "Security vulnerability." These tech headaches keep you up at night, fearing your entire online presence could vanish.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <p class="text-sm text-gray-500 text-center mt-12 mb-4">
+            This Price Will Increase Soon. Act Now Before It's Gone.
+        </p>
 
-        <!-- The Dream Solution Section -->
-        <section class="py-16 md:py-20 fade-in-section">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Imagine a Better Way... The <span class="text-gold">"Done-For-You, Own-It-Forever"</span> Solution</h2>
-                    <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">What if you could pay once and have a powerful, professional website that works for you 24/7... forever? No more bills. No more stress.</p>
-                </div>
-                <!-- Before/After -->
-                <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <!-- Before -->
-                    <div class="bg-red-50 p-6 md:p-8 rounded-lg border-l-4 border-red-500">
-                        <h3 class="text-xl md:text-2xl font-bold mb-4">BEFORE: The Website Renter</h3>
-                        <ul class="space-y-3 text-sm md:text-base text-gray-700">
-                            <li class="flex items-start"><span class="text-red-500 font-bold mr-2 mt-1">❌</span> Constant monthly bills for hosting & maintenance.</li>
-                            <li class="flex items-start"><span class="text-red-500 font-bold mr-2 mt-1">❌</span> Dependent on expensive developers for updates.</li>
-                            <li class="flex items-start"><span class="text-red-500 font-bold mr-2 mt-1">❌</span> Fear of unexpected costs and tech issues.</li>
-                            <li class="flex items-start"><span class="text-red-500 font-bold mr-2 mt-1">❌</span> Your website is a liability, not an asset.</li>
-                        </ul>
-                    </div>
-                    <!-- After -->
-                    <div class="bg-green-50 p-6 md:p-8 rounded-lg border-l-4 border-green-500">
-                        <h3 class="text-xl md:text-2xl font-bold mb-4">AFTER: The Website Owner</h3>
-                        <ul class="space-y-3 text-sm md:text-base text-gray-700">
-                            <li class="flex items-start"><span class="text-green-500 font-bold mr-2 mt-1">✅</span> One single payment. That's it. <strong class="text-green-600">Forever.</strong></li>
-                            <li class="flex items-start"><span class="text-green-500 font-bold mr-2 mt-1">✅</span> Total control and 100% ownership of your digital asset.</li>
-                            <li class="flex items-start"><span class="text-green-500 font-bold mr-2 mt-1">✅</span> Peace of mind with secure, hands-off maintenance.</li>
-                            <li class="flex items-start"><span class="text-green-500 font-bold mr-2 mt-1">✅</span> Your website becomes a 24/7 lead-generating machine.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Value Stack Section -->
-        <section id="value-stack" class="py-16 md:py-20 bg-navy text-white fade-in-section">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Here's Everything You Get...</h2>
-                <p class="text-base md:text-lg text-gray-300 max-w-3xl mx-auto mb-12">We've bundled everything you need to dominate online into one incredible, one-time offer.</p>
-                <div class="max-w-3xl mx-auto bg-white text-navy rounded-lg shadow-2xl p-6 md:p-8 text-left">
-                    <div class="border-b-2 border-gray-200 pb-4 mb-4">
-                        <h3 class="text-xl md:text-2xl font-bold">Your <span class="text-gold">Lifetime Website</span> Package</h3>
-                    </div>
-                    <!-- Stack Item (Mobile Friendly) -->
-                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 border-b border-gray-100">
-                        <span class="text-base md:text-lg mb-1 sm:mb-0">✅ Professional Website Setup</span>
-                        <span class="font-bold text-base text-gray-600 sm:text-navy">$2,500 Value</span>
-                    </div>
-                    <!-- Stack Item (Mobile Friendly) -->
-                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 border-b border-gray-100">
-                        <span class="text-base md:text-lg mb-1 sm:mb-0">✅ <strong class="text-gold">FREE</strong> Lifetime Web Hosting</span>
-                        <span class="font-bold text-base text-gray-600 sm:text-navy">$1,800 Value</span>
-                    </div>
-                    <!-- Stack Item (Mobile Friendly) -->
-                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 border-b border-gray-100">
-                        <span class="text-base md:text-lg mb-1 sm:mb-0">✅ Zero Maintenance Headaches</span>
-                        <span class="font-bold text-base text-gray-600 sm:text-navy">$1,200/yr Value</span>
-                    </div>
-                    <!-- Stack Item (Mobile Friendly) -->
-                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 border-b border-gray-100">
-                        <span class="text-base md:text-lg mb-1 sm:mb-0">✅ No Developer Dependency</span>
-                        <span class="font-bold text-base text-gray-600 sm:text-navy">Priceless Peace of Mind</span>
-                    </div>
-                     <!-- Stack Item (Mobile Friendly) -->
-                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4">
-                        <span class="text-base md:text-lg mb-1 sm:mb-0">✅ Future-Proof, Secure Technology</span>
-                        <span class="font-bold text-base text-gray-600 sm:text-navy">$500 Value</span>
-                    </div>
-                    <!-- Total Value -->
-                    <div class="bg-gray-50 rounded-lg p-6 mt-6 text-center">
-                        <p class="text-lg md:text-xl line-through text-gray-500">Total Value: $6,000+</p>
-                        <p class="text-xl md:text-2xl font-bold mt-2">Get Everything Today For Just One Payment Of</p>
-                        <p class="text-5xl md:text-6xl font-extrabold text-gold my-3">$99</p>
-                        <a href="https://wa.me/918851481785?text=I%20am%20interested%20for%20the%20forever%20site%20offer!" target="_blank" rel="noopener noreferrer" class="cta-button w-full flex items-center justify-center gap-3 bg-gold text-navy font-bold text-base sm:text-lg px-6 py-3 md:px-8 md:py-4 lg:px-10 lg:py-5 rounded-xl shadow-lg text-center">
-                            <span>Get Lifetime Access Now</span>
-                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Social Proof / Testimonials -->
-        <section class="py-16 md:py-20 fade-in-section">
-            <div class="container mx-auto px-6">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">Join Dozens of Smart Business Owners Who Chose Freedom</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Testimonial 1 -->
-                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-100">
-                        <p class="text-sm md:text-base text-gray-600 mb-4">"I was so tired of monthly fees. This was a no-brainer. Paid once, and my site has been running perfectly for over a year, bringing in new clients every week!"</p>
-                        <div class="flex items-center">
-                            <img loading="lazy" src="https://placehold.co/50x50/fca311/ffffff?text=JS" class="rounded-full mr-4" alt="Jane S., a happy coaching consultant customer.">
-                            <div>
-                                <p class="font-bold text-base">Jane S.</p>
-                                <p class="text-sm text-gray-500">Coach & Consultant</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial 2 -->
-                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-100">
-                        <p class="text-sm md:text-base text-gray-600 mb-4">"The best investment I've made in my business. My new website looks incredible, and the peace of mind from not having to worry about hosting or maintenance is priceless."</p>
-                        <div class="flex items-center">
-                            <img loading="lazy" src="https://placehold.co/50x50/14213d/ffffff?text=MB" class="rounded-full mr-4" alt="Mark B., a happy freelance photographer customer.">
-                            <div>
-                                <p class="font-bold text-base">Mark B.</p>
-                                <p class="text-sm text-gray-500">Freelance Photographer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial 3 -->
-                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-100 md:col-span-2 lg:col-span-1">
-                         <p class="text-sm md:text-base text-gray-600 mb-4">"I finally feel in control of my online presence. The process was simple, and the final product was better than I could have imagined. Highly recommend!"</p>
-                        <div class="flex items-center">
-                            <img loading="lazy" src="https://placehold.co/50x50/fca311/ffffff?text=AK" class="rounded-full mr-4" alt="Anna K., a happy real estate agent customer.">
-                            <div>
-                                <p class="font-bold text-base">Anna K.</p>
-                                <p class="text-sm text-gray-500">Real Estate Agent</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Scarcity / Urgency Section -->
-        <section class="bg-gray-100 py-16 fade-in-section">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-red-600 mb-4">Warning: This Is A Limited-Time Offer</h2>
-                <p class="text-base md:text-lg lg:text-xl text-gray-700 max-w-2xl mx-auto mb-8">Because we offer LIFETIME hosting, we can only provide this deal to the <strong class="font-extrabold">first 50 new clients this month</strong> to ensure quality service for everyone.</p>
-                <div class="bg-white inline-block p-6 rounded-lg shadow-xl border-t-4 border-gold">
-                    <p class="text-base md:text-lg font-semibold mb-2">Offer Ends In:</p>
-                    <div id="countdown-timer" class="text-3xl md:text-4xl font-extrabold text-navy tracking-wider">
-                        <span>01</span>:<span>18</span>:<span>36</span>:<span>54</span>
-                    </div>
-                    <div class="flex justify-center gap-4 text-xs text-gray-500 mt-1">
-                        <span>Days</span><span>Hours</span><span>Mins</span><span>Secs</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Guarantee Section -->
-        <section class="py-16 md:py-20 fade-in-section">
-            <div class="container mx-auto px-6">
-                <div class="max-w-3xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-2xl border-2 border-dashed border-gold flex flex-col md:flex-row items-center gap-6 md:gap-8">
-                    <div class="flex-shrink-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 md:h-24 md:w-24 text-gold" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl md:text-3xl font-bold mb-3 text-center md:text-left">Our 30-Day, "Love It Or Leave It" Guarantee</h3>
-                        <p class="text-base md:text-lg text-gray-700 text-center md:text-left">We are so confident that you will love your new website that we're offering a 100% risk-free guarantee. If you're not completely thrilled within 30 days, just let us know, and we'll send you a full refund.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Social Sharing Section -->
-        <section class="py-16 fade-in-section">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-2xl sm:text-3xl font-bold mb-4">Know Someone Who Needs This?</h2>
-                <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-8">Share this limited-time offer with fellow entrepreneurs and small business owners!</p>
-                <div id="social-share-buttons" class="flex justify-center items-center gap-4">
-                    <!-- Share buttons are injected by JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Final Call-to-Action -->
-        <footer id="final-cta" class="bg-navy text-white py-16 md:py-20 fade-in-section">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">Stop Renting Your Website. Own It. <br class="hidden md:block"/> <span class="text-gold">One Payment, Lifetime Results.</span></h2>
-                <p class="text-base md:text-lg lg:text-xl font-light mb-8 max-w-3xl mx-auto text-gray-300">
-                    Are you ready to unlock true freedom and build a digital asset that grows your business for years to come?
-                </p>
-                <a href="https://wa.me/918851481785?text=I%20am%20interested%20for%20the%20forever%20site%20offer!" target="_blank" rel="noopener noreferrer" class="cta-button w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gold text-navy font-bold text-base sm:text-lg px-6 py-3 md:px-8 md:py-4 lg:px-10 lg:py-5 rounded-xl shadow-lg">
-                    <span>Get Lifetime Access Now</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-                 <div class="mt-8 text-gray-400 text-sm sm:text-base">
-                    <p>Spots are limited. Secure your lifetime deal before it's gone.</p>
-                </div>
-            </div>
-        </footer>
-    </main>
+    </div>
 
     <script>
-        // Countdown Timer Logic
-        const countdownElement = document.getElementById('countdown-timer');
+        // Example: To show the offer section after 30 seconds (adjust as needed)
+        // const offerSection = document.getElementById('offer-section');
+        // offerSection.style.display = 'none'; // Hide by default in CSS if using this
 
-        function setCountdown() {
-            // Set a future date - for example, 2 days from now.
-            const countdownDate = new Date().getTime() + (2 * 24 * 60 * 60 * 1000) - (6 * 60 * 60 * 1000); // 1 day, 18 hours from now
+        // setTimeout(() => {
+        //     offerSection.style.display = 'block'; // Or 'flex' depending on layout
+        // }, 30000); // Show after 30 seconds (30000 milliseconds)
 
-            const interval = setInterval(() => {
-                const now = new Date().getTime();
-                const distance = countdownDate - now;
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                if (distance < 0) {
-                    clearInterval(interval);
-                    countdownElement.innerHTML = `<span>00</span>:<span>00</span>:<span>00</span>:<span>00</span>`;
-                } else {
-                    countdownElement.innerHTML = `
-                        <span>${String(days).padStart(2, '0')}</span>:
-                        <span>${String(hours).padStart(2, '0')}</span>:
-                        <span>${String(minutes).padStart(2, '0')}</span>:
-                        <span>${String(seconds).padStart(2, '0')}</span>
-                    `;
-                }
-            }, 1000);
-        }
-        
-        setCountdown();
-
-        // Fade-in animations on scroll
-        const sections = document.querySelectorAll('.fade-in-section');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-
-        // Social Sharing Logic
-        function setupSocialSharing() {
-            const container = document.getElementById('social-share-buttons');
-            const url = encodeURIComponent(window.location.href);
-            const text = encodeURIComponent(document.title);
-
-            const platforms = {
-                twitter: {
-                    icon: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>`,
-                    url: `https://twitter.com/intent/tweet?url=${url}&text=${text}`
-                },
-                facebook: {
-                    icon: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>`,
-                    url: `https://www.facebook.com/sharer/sharer.php?u=${url}`
-                },
-                linkedin: {
-                    icon: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zM5 8.5H0v16h5v-16zM19.5 8.5h-4.99v16h5v-8.398c0-2.193.04-5.013-3.04-5.013-3.04 0-3.5 2.37-3.5 4.852V24.5h-5V8.5h4.78v2.222h.067c.68-1.284 2.34-2.628 4.72-2.628 5.05 0 5.97 3.32 5.97 7.636V24.5z"/></svg>`,
-                    url: `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${text}`
-                }
-            };
-            
-            for (const [name, data] of Object.entries(platforms)) {
-                const link = document.createElement('a');
-                link.href = data.url;
-                link.target = '_blank';
-                link.rel = 'noopener noreferrer';
-                link.setAttribute('aria-label', `Share on ${name}`);
-                link.innerHTML = data.icon;
-                link.className = 'social-button w-12 h-12 rounded-full bg-gray-200 hover:bg-gold text-gray-700 hover:text-navy flex items-center justify-center';
-                container.appendChild(link);
-            }
-        }
-        setupSocialSharing();
+        // For a simple load, we show it directly. For dynamic, integrate with YouTube API or player events.
     </script>
+
 </body>
 </html>
+
 
